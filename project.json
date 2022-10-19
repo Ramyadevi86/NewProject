@@ -3,7 +3,7 @@
   "description": "Test Automation Project",
   "main": "Main.xaml",
   "dependencies": {
-    "Repo_Doqument": "[1.0.3]",
+    "Repo_Doqument": "[1.0.5]",
     "UiPath.System.Activities": "[22.10.1]",
     "UiPath.Testing.Activities": "[22.10.0]",
     "UiPath.UIAutomation.Activities": "[22.10.1]"
@@ -12,7 +12,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "22.10.1.0",
-  "projectVersion": "1.0.4",
+  "projectVersion": "1.0.3",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
