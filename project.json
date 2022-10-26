@@ -3,10 +3,11 @@
   "description": "Test Automation Project",
   "main": "Main.xaml",
   "dependencies": {
-    "Repo_Doqument": "[1.0.5]",
+    "Repo_Doqument": "[1.0.6]",
     "UiPath.System.Activities": "[22.10.1]",
     "UiPath.Testing.Activities": "[22.10.0]",
-    "UiPath.UIAutomation.Activities": "[22.10.1]"
+    "UiPath.UIAutomation.Activities": "[22.10.1]",
+    "UiPath.WebAPI.Activities": "[1.13.2]"
   },
   "webServices": [],
   "entitiesStores": [],
