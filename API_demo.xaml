@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>576,1756</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1197,1889</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>API_demo_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="72">
@@ -104,7 +104,7 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="API_demo" sap:VirtualizedContainerService.HintSize="400,1691.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="API_demo" sap:VirtualizedContainerService.HintSize="400,1824" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="intResStatus" />
       <Variable x:TypeArguments="x:Int32" Name="intResCode" />
@@ -122,7 +122,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" Body="[&quot;{&quot;&quot;userName&quot;&quot;:&quot;&quot;selvam.kumar@qruize.com&quot;&quot;,&quot;&quot;accessKey&quot;&quot;:&quot;&quot;1f2eV4OkQBsrGA8C&quot;&quot;,&quot;&quot;secretKey&quot;&quot;:&quot;&quot;0RV2HZIP-64VLQE8R-3E2E34PJ-UTGGBB5U&quot;&quot;}&quot;]" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="http://devwu.doqumentaiqbotica.com/v1/qbotica/requestAccess" sap:VirtualizedContainerService.HintSize="358,80.66666666666667" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="POST" Result="[strResContent]" StatusCode="[intResCode]" TimeoutMS="6000">
+    <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" Body="[&quot;{&quot;&quot;userName&quot;&quot;:&quot;&quot;selvam.kumar@qruize.com&quot;&quot;,&quot;&quot;accessKey&quot;&quot;:&quot;&quot;1f2eV4OkQBsrGA8C&quot;&quot;,&quot;&quot;secretKey&quot;&quot;:&quot;&quot;0RV2HZIP-64VLQE8R-3E2E34PJ-UTGGBB5U&quot;&quot;}&quot;]" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="http://devwu.doqumentaiqbotica.com/v1/qbotica/requestAccess" sap:VirtualizedContainerService.HintSize="358,79" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="POST" Result="[strResContent]" StatusCode="[intResCode]" TimeoutMS="6000">
       <ui:HttpClient.Attachments>
         <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
       </ui:HttpClient.Attachments>
@@ -139,9 +139,10 @@
         <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
       </ui:HttpClient.UrlSegments>
     </ui:HttpClient>
-    <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="358,68.66666666666667" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[jObj]" JsonString="[strResContent]" />
-    <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="358,68.66666666666667" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_2" JsonObject="[jObjNew]" JsonString="[jObj.Item(&quot;result&quot;).ToString]" />
-    <Assign sap:VirtualizedContainerService.HintSize="358,72" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="358,69" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[jObj]" JsonString="[strResContent]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="358,101" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[strResContent]" />
+    <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="358,69" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_2" JsonObject="[jObjNew]" JsonString="[jObj.Item(&quot;result&quot;).ToString]" />
+    <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[strToken]</OutArgument>
       </Assign.To>
@@ -149,8 +150,8 @@
         <InArgument x:TypeArguments="x:String">[jObjNew("token").ToString]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="358,68.66666666666667" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_4" JsonObject="[jUpdateObj]" JsonString="[System.IO.file.ReadAllText(&quot;One.json&quot;)]" />
-    <utat:RandomNumber Decimals="{x:Null}" DisplayName="Random Number" sap:VirtualizedContainerService.HintSize="358,238.66666666666666" sap2010:WorkflowViewState.IdRef="RandomNumber_1" Max="900" Min="300" Output="[intRandom]" />
+    <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="358,69" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_4" JsonObject="[jUpdateObj]" JsonString="[System.IO.file.ReadAllText(&quot;One.json&quot;)]" />
+    <utat:RandomNumber Decimals="{x:Null}" DisplayName="Random Number" sap:VirtualizedContainerService.HintSize="358,232" sap2010:WorkflowViewState.IdRef="RandomNumber_1" Max="900" Min="300" Output="[intRandom]" />
     <Assign sap:VirtualizedContainerService.HintSize="358,72" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="njl:JToken">[jUpdateObj("request_id")]</OutArgument>
