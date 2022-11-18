@@ -12,7 +12,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>962,3798</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1197,3927</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Doqument_Dashboard_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="37">
@@ -56,7 +56,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="46">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="92">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
@@ -102,21 +102,22 @@
       <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Doqument_Dashboard" sap:VirtualizedContainerService.HintSize="972,3733.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Doqument_Dashboard" sap:VirtualizedContainerService.HintSize="972,3862" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome: Doqument | Intelligent Document Captu" sap:VirtualizedContainerService.HintSize="930,3643.3333333333335" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Always" ScopeGuid="e7cf9966-9bdb-4c02-aa0d-5b6161a48a0b" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome: Doqument | Intelligent Document Captu" sap:VirtualizedContainerService.HintSize="930,3772" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Always" ScopeGuid="e7cf9966-9bdb-4c02-aa0d-5b6161a48a0b" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="896,3415.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="896,3546" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Default="WesternUnion1" Name="LoginUser" />
               <Variable x:TypeArguments="x:String" Default="P@ssw0rd" Name="Password" />
@@ -126,7 +127,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'User Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="854,231.33333333333334" sap2010:WorkflowViewState.IdRef="NTypeInto_3" Text="[LoginUser]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'User Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="854,227" sap2010:WorkflowViewState.IdRef="NTypeInto_3" Text="[LoginUser]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="http://demo.doqumentaiqbotica.com:4800/" ContentHash="BFUInAajdU6oXxpHVBOuHQ" DesignTimeRectangle="704, 442, 525, 24" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'INPUT mat-input-26'" FullSelectorArgument="&lt;webctrl id='mat-input-26' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='mat-input-26' tag='INPUT' type='' class='mat-input-element mat-form-field-autofill-control ng-tns-c61-26 cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid' aaname='User Name' /&gt;" Guid="9ffbdbca-3f13-4532-8a12-dcf5019e6e1c" ImageBase64="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" InformativeScreenshot="6e8c028aaabbd32f83e56ff3bee5b709.png" Reference="3E7jbeu52Ey1I7XcOmd8ZQ/sI1CQnJwVkyAbfRGtZfYCg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Doqument | Intelligent Document Capture That Accelerates | Intelligent Document Processing' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -137,7 +138,8 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="854,231.33333333333334" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="e7cf9966-9bdb-4c02-aa0d-5b6161a48a0b" Text="[Password]" Version="V3">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="854,101" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[LoginUser]" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="854,227" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="e7cf9966-9bdb-4c02-aa0d-5b6161a48a0b" Text="[Password]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="http://demo.doqumentaiqbotica.com:4800/" ContentHash="vVtbpgLr60ScW_AAwoejfA" DesignTimeRectangle="576, 523, 364, 24" DesignTimeScaleFactor="1.5" ElementType="InputBoxPassword" FriendlyName="'Password'" FullSelectorArgument="&lt;webctrl id='mat-input-27' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='mat-input-27' tag='INPUT' type='password' class='mat-input-element mat-form-field-autofill-control ng-tns-c61-27 cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid' aaname='Password' /&gt;" Guid="c5b2da67-fe80-45f7-835d-cc030c8f16bc" ImageBase64="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" InformativeScreenshot="9593f6fd71695413a2b9d087c439af60.png" Reference="3E7jbeu52Ey1I7XcOmd8ZQ/rV_iprpbqU2Qvcnp-WFOag" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Doqument | Intelligent Document Capture That Accelerates | Intelligent Document Processing' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
