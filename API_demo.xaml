@@ -140,7 +140,7 @@
       </ui:HttpClient.UrlSegments>
     </ui:HttpClient>
     <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="358,69" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[jObj]" JsonString="[strResContent]" />
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="358,101" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[strResContent]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="358,101" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[strResContent]" />
     <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="358,69" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_2" JsonObject="[jObjNew]" JsonString="[jObj.Item(&quot;result&quot;).ToString]" />
     <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
