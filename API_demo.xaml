@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1197,2030</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1283,2160</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>API_demo_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="72">
@@ -104,7 +104,7 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="API_demo" sap:VirtualizedContainerService.HintSize="400,1965" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="API_demo" sap:VirtualizedContainerService.HintSize="400,2095" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="intResStatus" />
       <Variable x:TypeArguments="x:Int32" Name="intResCode" />
@@ -153,7 +153,7 @@
     </Assign>
     <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="358,69" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_4" JsonObject="[jUpdateObj]" JsonString="[System.IO.file.ReadAllText(&quot;One.json&quot;)]" />
     <utat:RandomNumber Decimals="{x:Null}" DisplayName="Random Number" sap:VirtualizedContainerService.HintSize="358,232" sap2010:WorkflowViewState.IdRef="RandomNumber_1" Max="900" Min="300" Output="[intRandom]" />
-    <Assign sap:VirtualizedContainerService.HintSize="358,72" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="njl:JToken">[jUpdateObj("request_id")]</OutArgument>
       </Assign.To>
@@ -161,10 +161,10 @@
         <InArgument x:TypeArguments="njl:JToken">["after_"+intRandom.ToString]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="358,68.66666666666667" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_5" JsonObject="[jUpdatedObj]" JsonString="[jUpdateObj.ToString]" />
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="358,98.66666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[jUpdatedObj(&quot;request_id&quot;).ToString]" />
-    <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="[Environment.CurrentDirectory+&quot;\One.json&quot;]" sap:VirtualizedContainerService.HintSize="358,145.33333333333334" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[jUpdatedObj.ToString]" />
-    <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/json" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="http://devwu.doqumentaiqbotica.com/v1/qbotica/upload/file" sap:VirtualizedContainerService.HintSize="358,80.66666666666667" sap2010:WorkflowViewState.IdRef="HttpClient_2" Method="POST" Result="[strNewRes]" TimeoutMS="6000">
+    <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="358,69" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_5" JsonObject="[jUpdatedObj]" JsonString="[jUpdateObj.ToString]" />
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="358,97" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[jUpdatedObj(&quot;request_id&quot;).ToString]" />
+    <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="[Environment.CurrentDirectory+&quot;\One.json&quot;]" sap:VirtualizedContainerService.HintSize="358,142" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[jUpdatedObj.ToString]" />
+    <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/json" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="http://devwu.doqumentaiqbotica.com/v1/qbotica/upload/file" sap:VirtualizedContainerService.HintSize="358,79" sap2010:WorkflowViewState.IdRef="HttpClient_2" Method="POST" Result="[strNewRes]" TimeoutMS="6000">
       <ui:HttpClient.Attachments>
         <InArgument x:TypeArguments="x:String" x:Key="file">One.json</InArgument>
       </ui:HttpClient.Attachments>
@@ -181,6 +181,7 @@
         <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
       </ui:HttpClient.UrlSegments>
     </ui:HttpClient>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="358,98.66666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[strNewRes.ToString]" />
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="358,97" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[strNewRes.ToString]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="358,101" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Welcome&quot;]" />
   </Sequence>
 </Activity>
